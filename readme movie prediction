@@ -1,0 +1,54 @@
+# Movie Rating Prediction
+
+## Project Overview
+This project aims to build a **predictive model** to estimate movie ratings based on various attributes. The dataset used for this task is the **IMDb Movies India dataset**.
+
+## Dataset Information
+The dataset contains information about movies, including:
+- **Year**: The release year of the movie.
+- **Votes**: Number of audience votes.
+- **Duration**: Length of the movie in minutes.
+- **Genre**: The category of the movie (e.g., Action, Drama, Comedy).
+- **Director**: The name of the movie director.
+- **Actors**: The lead actors in the movie.
+- **Rating**: The IMDb rating, which serves as the target variable for prediction.
+
+## Data Preprocessing
+- **Handling Missing Values**: Missing numerical values were replaced with their median, while categorical missing values were replaced with the mode.
+- **Encoding Categorical Variables**: One-hot encoding was used to transform categorical features like Genre, Director, and Actors.
+- **Feature Engineering**:
+  - **Director Success Rate**: Average rating of all movies directed by a particular director.
+  - **Average Rating of Similar Movies**: Grouping by Genre to compute average ratings.
+
+## Model Selection & Training
+- **Algorithm Used**: Random Forest Regressor
+- **Train-Test Split**: 80% training, 20% testing
+- **Evaluation Metrics**:
+  - **Mean Squared Error (MSE)**
+  - **R-squared Score (R²)**
+
+## Results
+The trained model predicts IMDb ratings with the following results:
+- **Mean Squared Error (MSE):** Measures the average squared differences between actual and predicted values.
+- **R² Score:** Evaluates the proportion of variance explained by the model.
+
+## Visualizations
+A scatter plot compares actual and predicted ratings, giving insight into model performance.
+
+## How to Use
+1. Install dependencies: `pip install pandas numpy seaborn scikit-learn matplotlib`
+2. Run the Python script to preprocess data, train the model, and evaluate performance.
+
+## Repository Structure
+- `movie_rating_prediction.py`: The main script for data preprocessing and model training.
+- `IMDb Movies India.csv`: The dataset used for training the model.
+- `README.md`: Documentation for the project.
+
+## Future Improvements
+- Experimenting with deep learning models like Neural Networks.
+- Hyperparameter tuning to improve prediction accuracy.
+- Incorporating additional features like budget and box office collections.
+
+## License
+This project is open-source and available for educational and research purposes.
+
